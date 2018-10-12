@@ -1,0 +1,142 @@
+\documentclass{article}
+
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linktoc=all,
+	citecolor=black,
+	filecolor=black,
+	linkcolor=black,
+	urlcolor=black
+}
+\usepackage{amsmath}
+\usepackage{mathpazo}
+
+%===============================================================
+%===============================================================
+%===============================================================
+%===============================================================
+% COMMANDS
+
+\newcommand{\definition}[1]{
+	\vspace{10px}
+	\noindent {\sc Definition.} #1
+	\vspace{10px}
+}
+\newcommand{\tbs}{\textbackslash}
+\newcommand{\ttilde}{\textasciitilde}
+\newcommand{\tasterisk}{\textasteriskcentered}
+
+%===============================================================
+%===============================================================
+%===============================================================
+%===============================================================
+% TITLE PAGE
+
+\title{Principia Nota}
+\author{Henry Blanchette}
+\date{}
+
+%===============================================================
+%===============================================================
+%===============================================================
+%===============================================================
+% BEGIN DOCUMENT
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\newpage
+
+\section{Introduction}
+
+The point of this compilation is to record and formalize my notations. I am very intrigued by the aesthetics of code, where I mean code in the most general sense:
+
+\definition{A \textbf{code} is a set of consistent and formal rules for recorded expression.}
+
+Note that I didn't restrict code to only \textit{computer} code. I think that, although there are obvious and important distinctions between code meant to be read by humans and code meant to read by machines, the distinctions are merely superficial. In my taxonomy, I label \textit{Machine Language} the section for programming languages (usually written by humans) and machine/assembly-esque code.
+
+There is a distinction between what I mean by \textit{code} and what I mean by \textit{language}. In fact, the term \textit{language} actually has a technical meaning in computer science.
+
+\newpage
+
+%===============================================================
+%===============================================================
+%===============================================================
+%===============================================================
+% Content
+	
+\section{Plaintext}
+
+\section{Archaic}
+
+%===============================================================
+%===============================================================
+\section{Philosophy}
+
+\subsection{Logic}
+\subsubsection{Variable}
+
+\subsection{Metaphysics}
+
+\subsection{Epistemology}
+
+\subsection{Ethics}
+
+\subsection{Metaphysics}
+
+%===============================================================
+%===============================================================
+\section{Mathematics}
+
+\subsection{Logic}
+
+\subsection{Set Theory}
+
+\subsection{Measure Theory}
+
+\subsection{Number Theory}
+
+\subsection{Algebra}
+
+\subsection{Analysis}
+
+\subsection{Calculus}
+
+%===============================================================
+%===============================================================
+\section{Computarelogy}
+
+\subsection{System}
+
+\subsubsection{File System}
+\subsubsection{}
+
+\subsection{Program}
+
+\subsection{Language}
+\subsubsection{Context-Free Grammar}
+\subsubsection{Regular Expression}
+
+	Regular expressions are a rare instance of practicality derived from this subfield of Computarelogy. A regular expression represents a set of strings. The academic standard for regular expressions is the simple grammar
+	\begin{align*}
+		S &\rightarrow
+			\epsilon
+			\mid \sigma_i \mid \cdots \mid \sigma_n
+			\mid SS
+			\mid (S \cup S)
+			\mid (S)^*
+	\end{align*}
+	Where $\Sigma = \{ \sigma_i, \dots, \sigma_n \}$ is the alphabet of the grammar. In addition to these standard rules, there are many other common rules:
+	\[ \begin{array}{c|l}
+		S+ &\text{ anything can come after } S\\
+		\$ &\text{ the end of the string}\\
+		S \mid S &\text{ set union}
+	\end{array} \]
+
+\subsubsection{Automata}
+
+\subsection{Artificial Intelligence}
+
+\end{document}
