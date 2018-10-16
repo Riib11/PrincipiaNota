@@ -18,18 +18,24 @@
 \contentsline {subsection}{\numberline {5.7}Calculus}{4}{subsection.5.7}
 \contentsline {subsection}{\numberline {5.8}Graph Theory}{4}{subsection.5.8}
 \contentsline {section}{\numberline {6}Computarelogy}{4}{section.6}
-\contentsline {subsection}{\numberline {6.1}System}{4}{subsection.6.1}
-\contentsline {subsubsection}{\numberline {6.1.1}File System}{4}{subsubsection.6.1.1}
-\contentsline {subsubsection}{\numberline {6.1.2}}{4}{subsubsection.6.1.2}
-\contentsline {subsection}{\numberline {6.2}Programming}{4}{subsection.6.2}
-\contentsline {subsubsection}{\numberline {6.2.1}Special Symbol}{4}{subsubsection.6.2.1}
-\contentsline {subsubsection}{\numberline {6.2.2}Comment}{6}{subsubsection.6.2.2}
-\contentsline {subsection}{\numberline {6.3}Language}{6}{subsection.6.3}
-\contentsline {subsubsection}{\numberline {6.3.1}Context-Free Grammar}{7}{subsubsection.6.3.1}
-\contentsline {subsubsection}{\numberline {6.3.2}Regular Expression}{8}{subsubsection.6.3.2}
-\contentsline {subsubsection}{\numberline {6.3.3}Automata}{8}{subsubsection.6.3.3}
-\contentsline {subsection}{\numberline {6.4}Computability}{8}{subsection.6.4}
-\contentsline {subsection}{\numberline {6.5}Complexity}{8}{subsection.6.5}
-\contentsline {subsection}{\numberline {6.6}Artificial Intelligence}{8}{subsection.6.6}
-\contentsline {section}{\numberline {7}Game Design}{8}{section.7}
-\contentsline {section}{\numberline {8}Physics}{8}{section.8}
+\contentsline {subsection}{\numberline {6.1}Binary}{4}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}System}{5}{subsection.6.2}
+\contentsline {subsubsection}{\numberline {6.2.1}File System}{5}{subsubsection.6.2.1}
+\contentsline {subsubsection}{\numberline {6.2.2}}{5}{subsubsection.6.2.2}
+\contentsline {subsection}{\numberline {6.3}Pseudocode}{5}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}Programming}{5}{subsection.6.4}
+\contentsline {subsubsection}{\numberline {6.4.1}Special Symbol}{5}{subsubsection.6.4.1}
+\contentsline {subsubsection}{\numberline {6.4.2}Naming}{7}{subsubsection.6.4.2}
+\contentsline {paragraph}{Casing.}{7}{section*.2}
+\contentsline {paragraph}{Capitalization.}{8}{section*.3}
+\contentsline {subsubsection}{\numberline {6.4.3}Comment}{8}{subsubsection.6.4.3}
+\contentsline {subsection}{\numberline {6.5}Language}{8}{subsection.6.5}
+\contentsline {subsubsection}{\numberline {6.5.1}Context-Free Grammar}{9}{subsubsection.6.5.1}
+\contentsline {subsubsection}{\numberline {6.5.2}Regular Expression}{10}{subsubsection.6.5.2}
+\contentsline {subsubsection}{\numberline {6.5.3}Automata}{10}{subsubsection.6.5.3}
+\contentsline {subsection}{\numberline {6.6}Computability}{10}{subsection.6.6}
+\contentsline {subsection}{\numberline {6.7}Complexity}{10}{subsection.6.7}
+\contentsline {subsection}{\numberline {6.8}Artificial Intelligence}{10}{subsection.6.8}
+\contentsline {section}{\numberline {7}Game Design}{10}{section.7}
+\contentsline {section}{\numberline {8}Physics}{10}{section.8}
+\contentsline {section}{\numberline {9}Economics}{10}{section.9}

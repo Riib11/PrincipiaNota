@@ -12,6 +12,10 @@
 \usepackage{amsmath}
 \usepackage{mathpazo}
 \usepackage{textcomp}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{marginnote}
+\usepackage{amssymb}
 
 %===============================================================
 %===============================================================
@@ -20,9 +24,9 @@
 % COMMANDS
 
 \newcommand{\definition}[1]{
-	\vspace{5px}
-	\noindent {\sc Definition.} #1
-	\vspace{5px}
+	\vspace{10px}
+	\noindent {[\sc Definition]} #1
+	\vspace{10px}
 }
 \newcommand{\tbs}{\textbackslash}
 \newcommand{\ttilde}{\textasciitilde}
@@ -70,7 +74,16 @@ There is a distinction between what I mean by \textit{code} and what I mean by \
 %===============================================================
 % Content
 	
-\section{Plaintext}
+\section{Rich Text}
+
+\subsubsection{Header}
+\subsubsection{Plain}
+\subsubsection{Italic}
+\subsubsection{Bold}
+\subsubsection{Bold and Italic}
+\subsubsection{Underline}
+\subsubsection{Math}
+\subsubsection{Code}
 
 \section{Archaic}
 
@@ -93,9 +106,59 @@ There is a distinction between what I mean by \textit{code} and what I mean by \
 %===============================================================
 \section{Mathematics}
 
-\subsection{Logic}
+\subsection{Names}
+
+\subsubsection{Greek}
+\subsubsection{Latin}
+\subsubsection{Diacratic}
+\subsubsection{Special Symbol}
+\subsubsection{Capitalization}
+\subsubsection{Abbreviation}
+\subsubsection{Length}
+\subsubsection{Scale}
 
 \subsection{Set Theory}
+
+	Set Theory is one of the most fundamental theories in mathematics. As per this important role, it reserves some very iconic and widespread notation.
+
+	\definition{A \textbf{set} is an collection of things. There is no necessary relation between the things. For things $s_1, s_2, \dots$ the set of just these things is denotes $\{ s_1, s_2, \dots \}$. A set with no things is denoted $\{\}$ or $\varnothing$.}
+
+	Global-scope sets are usually named with capitalized, single letters. This easily leads to the elements of a globally-scoped set usually named with variants on the lower-case of that letter. For example, we could write $S = \{ s \}$, or $S = \{ s_1, s_2, \dots, s_n \}$. Note that a member of a set could also be a set. This naming convention stays consistent because of the ``globally-scoped'' aspect. By a \textit{globally-scoped} set name, I mean that the context of the name doesn't frequently refer to or make reference to the set's being a member of other sets.
+
+	The kinds of things that can go into a given set are unrestricted. If $s$ is in $S$, then we write ``$s$ is a member of $S$'', ``$s$ is an element of $S$'', or with mathematical symbols,  \[ s \in S \]
+
+	The symbol ``$\in$'' is derived from a standard ``$\epsilon$''. In \textit{Arithmetices prinicipia nova methodo exposita} Giuseppe Peano used ``$\epsilon$'' to abbreviate ``est'', which is latin for ``in'' (note that the text was entirely in latin). Later in Bertrand Russel's \textit{Principia Mathematica}, the same meaning was used but the printed ended up looking more like ``$\in$'', a intended to be a more modern-looking epsilon. The new symbol was adopted over time as distinct from ``$\epsilon$'' and delegated exclusively to meaning ``\dots is a member of the set \dots''.
+
+	Dealings with sets also get their own notations. Symbols can be reflected across their y-axis to yield the symbol working in the opposite direction. For example, $A \subset B$ can be written as $B \supset A$. The most important set-related notations are
+	\begin{tabular}{c|l}
+		Symbol Instance & Description \\ \hline
+		$a \in A$ &
+			Set membership. $a$ is an element of $A$. \\
+		$A \cup B$ &
+			Set union. The set with all the elements of $A$ and all the elements of $B$. The symbol resembles a ``linking'' of the two sets, like a chain. \\
+		$A \cap B$ &
+			Set intersection. The set with all the elements of $A$ that are also elements of $B$. The symbol resembles a filtering of the two sets, like a sifting apparatus or funnel. \\
+		$A \setminus B$ &
+			Set difference. The set with all the elements of $A$ that are not elements of $B$. The symbol resembles a long and tilted minus sign. \\
+		$A \subset B$ &
+			Proper subset. The symbol is an alteration on the $\cup, \cap$, with the sideways tilt indicating that $A$ unioned with some other set would yield $B$. Specifically, $A \subset B$ usually implies that $A \neq B$. However, some take the convention of allowing $A = B$, in which case their is no technical difference between $A \subset B$ and $A \subseteq B$. The only difference is an emphasis on the possibility that $A = B$. \\
+		$A \subseteq B$ &
+			Included subset. The symbol is an alteration on $\subset$, adding half of a $=$ underneath to indicate the possibility of $A = B$. \\
+		$A = B$ &
+			Set equality. Sets are equal if and only if $A \subseteq B$ and $B \subseteq A.$ \\
+		$\{ a \in A \mid a \text{ has property } P \} &
+			Set definition idiom. This translates to ``the largest subset of $A$ in which every element has property $P$''. Note that $P$ is extremeley flexible. This notation for defining sets is extremeley useful and concise. Sometimes, the ``$\in A$'' to the left of ``\mid'' is not written and is eiher implied by ``P'' or assumed to be unrestricted to any particular set. \\
+		$A \times B$
+			Cartesian Product. Formally, $A \times B = \{ (a,b) \mid a \in A, b \in B \}$. $A \times B$ is pronounced ``the Cartesian cross-product of A and B,'' but the ``Cartesian'' adjective is implicit. The ``cross'' idea is to imagine that $A$ and $B$ are perpendicular axes, forming a cross, and yielding a grid where each point in the grid is labeled by an $(a,b)$ where $a \in A, b \in B$. This is the \textit{ordered pairs} cross the sets. An ordered pair written as $(a,b)$ which is a notation for $\{ a , \{a, b\}\}. The set construction indicates ordering by having the ``second'' element only appear in the set that is the second element of $(a,b)$. This set construction works well for ordered pairs, but it difficult to extend to the more generic \textit{n-tuple}. I will cover this later. \\
+		$A / B$ &
+			Set modulus. TODO \\
+	\end{tabular}
+
+	\begin{enumerate}
+		\item $\cap$ 
+	\end{enumerate}
+
+
 
 \subsection{Measure Theory}
 
@@ -113,10 +176,27 @@ There is a distinction between what I mean by \textit{code} and what I mean by \
 %===============================================================
 \section{Computarelogy}
 
+\subsection{Binary}
+
+	Binary is the base-2 number-representation format. The name ``binary'' comes from latin, \textit{binarius}, which means ``consisting of two''. Indeed, the symbols allowed in binary numbers is a \textit{binarius} set: $\{ 0, 1 \}$. Note that binary numbers don't have different \textit{values} from, from example, decimal numbers.  The convention for number-representation formats using the arabic numerals is that the value of each number increases from right to left. The rightmost repesents a number of $2^0$s, and for each slot $2^i$, the slot immediately to the left of it is $2^{i+1}$. You may abstractly think of a number in this kind of format as a string that stretches infinitely leftward from a rightmost origin, where each slot contains a numeral (in the case of binary, a $0$ or a $1$).
+
+	\definition{A \textbf{bit} is a single $0$ or $1$, not necessarily interpreted in the context of representing a longer binary-formatted number.}
+
+	In terms of notation, this abstract representation is inefficient because we most often represent numbers that require only a few slots, and be waste our time always considering the infite string of $0$s on the left-tail of each number-representation when we can represent all of those zeros consicely by not writing them at all. In general written notation, any zero that is the leftmost numeral in a number-representation may be removed with no interpretive effect.
+
+	In the context of Computarelogy however, we sometimes do desire a few extra ``trailing'' zeros in our notation. This is because here, number values exist in the context of memory which is limited and usually pre-designated. If a value is 8-bits, then we want to write $000010$ rather than $10$ to indicate its 8-bit designation.
+
+	\definition{An \textbf{n-bit} value is one that could only be one of $2^n$ possible values. This yields that is a bijection between each of these possible values and the numbers that can be represented using at maximum 8 slots in binary-form: $0, \dots, 2^n-1$}.
+
+	Note that there is not just one binary format. Any bijection between n-bit values and the numbers $0, \dots, 2^n-1$.
+
 \subsection{System}
 
 \subsubsection{File System}
 \subsubsection{}
+
+\subsection{Pseudocode}
+
 
 \subsection{Programming}
 
@@ -183,14 +263,24 @@ There is a distinction between what I mean by \textit{code} and what I mean by \
 		\item \textbf{Brevity} is how efficiently name represent the relevant features of their representees.
 	\end{enumerate}
 
-	When first reading someone's code, the first thing you will most likely notice is their style of casing. Casing is one of the easiest ways for source-code to convey abstract meaning tied to programming constructs. The dominant flavors of casing are
+	\paragraph{Casing.} When first reading someone's code, the first thing you will most likely notice is their style of casing. Casing is one of the easiest ways for source-code to convey abstract meaning tied to programming constructs. The dominant flavors of casing are
+
+	\begin{enumerate}[label=\Alph*)]
+		\item \textbf{Camel Case} has the first letter of each word (except, by default, the first word) in a name be upper case, whereas all other letters are lower case. For example, \code{thisIsAName}. As for the first word, its capitalization is delegated to contextual judgement. This case infamously has discontinuities with words that generally require capital letters and acronyms. For example, \code{XMLHttpRequest} is a commonly-used javascript function. Javascript standardly adheres to camel case, but this example demonstrates both an inconsistency with camel case and also with its interal casing. Compare it to \code{XmlHttpRequest} and \code{XMLHTTPRequest}. The truth is that none of them look particularly aesthetic. The problem is that XML and HTTP are both fully-capitalized acronyms, but together they cross a line of acceptable readability (especially as a function to be used as often as it is). So, the result trades accuracy for readability. In this case, the trade seems to be fine because as a common function people have gotten used to it without much of a problem. For conflicts like this in non-standard code however, instances of this problem become quite a pain on the eyes.
+
+		\item \textbf{Snake Case} has each word in a name seperated by a \code{\_} character. For example, \code{this\_is\_a\_name}. Snake case is allowed in almost all languages, but is especially standard in C-like languages. Most C/C++ libraries make use of this casing. This casing is unparalled in its support for both readability and accuracy. Since words are completely seperated and \code{\_} is a (almost-)universally unrestricted character in names, snake case yields the most standard scheme for casing. All special-casings are also supported by this casing, like screaming-case, capital-case, and all-lower-case. However, snake case can also promote longer names with several words due to just the ease of it. In functional programming, snake case words can sometimes be hard to tell apart due to the \code{\_} being in the place of a space, for example \code{activate\_function on\_x with\_also\_y}. Note that, depending on your naming semantic-style, this can be a disadvantage \textit{or} an advantage.
+		
+		\item \textbf{Kebab Case} (aka Cobol Case) has each word in a name is seperated by a \code{-} character. For example, \code{this-is-a-name}. Famously, CSS standardizes and Agda requires kebab casing. The immediately-obvious drawback to this casing is the sacrifice of \code{-}. ``How could a language with kebab casing parse subtraction?'' you might wonder. Well, its definitely a problem that requires a solution. In CSS names are never occur nakely next to calcultion expressions, so kebab casing never yields any ambiguity. But this is special for CSS, as simply a styling language. For a more fully-featured language like Agda, kebab casing's tendrils influence and are infuenced by the very foundations of the language itself. In order to remove parsing-ambiguity or even reader-ambiguity, Agda requires that all names be seperated by spaces or other restricted characters. You could never write \code{a-b} to mean subtraction, you must write \code{a - b} or \code{(a)-(b)}. A reason for this enforcement is another feature of Agda: using the \code{\_} to ease infix notation. Rather than annotating an infix for an operator like \code{+}, Agda allows \code{\_+\_} where each \code{\_} represents and input around the use of the function.
+	\end{enumerate}
+
+	\paragraph{Capitalization.} These are the rules you use when deciding how to capitalize particular letters of a name. Different groups of letters in the word are used in seperate semantic spaces of convention.
 
 	\begin{enumerate}
-		\item \textbf{Camel Case} has the first letter of each word in a name be upper case, whereas all other letters are lower case. For example, \code{thisIsAName}. As for the first word, its capitalization is delegated to contextual judgement. This case infamously has discontinuities with words that generally require capital letters and acronyms. For example, \code{XMLHttpRequest} is a commonly-used javascript function. Javascript standardly adheres to camel case, but this example demonstrates both an inconsistency with camel case and also with its interal casing. Compare it to \code{XmlHttpRequest} and \code{XMLHTTPRequest}. The truth is that none of them look particularly aesthetic. The problem is that XML and HTTP are both fully-capitalized acronyms, but together they cross a line of acceptable readability (especially as a function to be used as often as it is). So, the result trades accuracy for readability. In this case, the trade seems to be fine because as a common function people have gotten used to it without much of a problem. For conflicts like this in non-standard code however, instances of this problem become quite a pain on the eyes.
-
-		\item \textbf{Snake Case} has each word seperated by a \code{_} character. For example, \code{this_is_a_name}.
+		\item \textbf{Proper Case} is where the first letter of each word in a name is upper-case. Capitalizing these letters signifies that this name is of a container- or structure-like thing. Specifically, the thing named either has children or parts, or is instanciable. Common use-cases are class names, module names, project names. The idea is that proper-cased names are of large, important objects that hold or control many smaller parts. Specifically in functional programming, this capitalization is used for the names of types. This choice is motivated by the facts that types and tokens are extremeley important to distinguish in a functional setting, as they are often used near name references. Additionally, the idea of a type being a sort of ``container'' of its tokens carries over from the more generic use of proper-casing. Overall, this casing is extremeley standard and useful, probably because it implictly rides on associations humans have with capitalized words.
 		
-		\item \textbf{Kebab Case} (aka Cobol Case) has each word seperated by a \code{-} character. For example, \code{this-is-a-name}. Famously, CSS standardizes and Agda requires kebab casing. The immediately-obvious drawback to this
+		\item \textbf{Screaming Case} is where all letters in a name are upper-case, in the like of how a millenial (or younger) internet-forum participant indicates that they intend their words to be \textit{screamed} at the reciever. Screaming casing is almost universally adopted as a standard for naming either enumerated names or constant, global names. These are namse that do not change value and are defined usually in a global, static, or singleton-class context. This case conflicts heavily with camel casing. If restricted to very specific and consistent uses, this case is very useful and effectively seperates ``global'' and ``local'' sections of your code.
+
+		\item \textbf{Lower Case} is where all letters in a name are lower-case. This casing is looked down upon because it sacrifices readability for seemingly no reason. Nevertheless, it makes its way into standard libraries across many languages. It is typically used for untility functions or temporary variable names. Note that one-word names do not count as lower-case unlese the scheme they are written in is consistently lower-case even in multi-worded names.
 	\end{enumerate}
 
 \subsubsection{Comment}
@@ -210,11 +300,11 @@ There is a distinction between what I mean by \textit{code} and what I mean by \
 
 	\definition{A context-free grammar (CFG) is a set of rules that yield a language (a context-free language (CFL)) with an alphabet $\Sigma$. Formally, a grammar $G$ is given by \[
 		G = (S, \Sigma \cup \{ \epsilon \}, V, R)
-	\] where $S$ is the start token, $\Sigma \cup \{ \epsilon \}$ is a set of terminals, $V$ is a set of non-terminals, and $R$ is the set of rules.}
+	\] where $S$ is the start token, $\Sigma \cup \{ \epsilon \}$ is a set of terminals, $V$ is an alphabet of non-terminals, and $R$ is the set of rules. It is required that $(\Sigma \cup \{\epsilon\} \cap V = \varnothing)$.}
 
-	The language is yielded by applying staring with $S$ and then applying the rules in every valid combination and order. In other words, a string is in the yielded language if it can be produced exactly by applying rules to $S$.
+	The language is yielded by starting with $S$ and then applying each valid string of rules applications in $R^*$ (applying each string's rules consecutively, in order). In other words, a string is in the yielded language if it can be produced exactly by applying a valid string of rules, each rule consecutively, to $S$.
 
-	\defintion{A \textbf{token} is either a letter in either $\Sigma$ or $V$.}
+	\definition{A \textbf{token} is a letter in either $\Sigma$ or $V$.}
 
 	\definition{If a token is \textbf{terminal}, then it cannot be manipulated by rule applications. If a terminal is produced by a rule application in a string, then it will persist till the string is completed. When a string contains only terminals, it is completed.}
 
@@ -273,6 +363,10 @@ There is a distinction between what I mean by \textit{code} and what I mean by \
 %===============================================================
 %===============================================================
 \section{Physics}
+
+%===============================================================
+%===============================================================
+\section{Economics}
 
 
 \end{document}

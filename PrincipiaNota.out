@@ -18,18 +18,22 @@
 \BOOKMARK [2][-]{subsection.5.7}{Calculus}{section.5}% 18
 \BOOKMARK [2][-]{subsection.5.8}{Graph Theory}{section.5}% 19
 \BOOKMARK [1][-]{section.6}{Computarelogy}{}% 20
-\BOOKMARK [2][-]{subsection.6.1}{System}{section.6}% 21
-\BOOKMARK [3][-]{subsubsection.6.1.1}{File System}{subsection.6.1}% 22
-\BOOKMARK [3][-]{subsubsection.6.1.2}{}{subsection.6.1}% 23
-\BOOKMARK [2][-]{subsection.6.2}{Programming}{section.6}% 24
-\BOOKMARK [3][-]{subsubsection.6.2.1}{Special Symbol}{subsection.6.2}% 25
-\BOOKMARK [3][-]{subsubsection.6.2.2}{Comment}{subsection.6.2}% 26
-\BOOKMARK [2][-]{subsection.6.3}{Language}{section.6}% 27
-\BOOKMARK [3][-]{subsubsection.6.3.1}{Context-Free Grammar}{subsection.6.3}% 28
-\BOOKMARK [3][-]{subsubsection.6.3.2}{Regular Expression}{subsection.6.3}% 29
-\BOOKMARK [3][-]{subsubsection.6.3.3}{Automata}{subsection.6.3}% 30
-\BOOKMARK [2][-]{subsection.6.4}{Computability}{section.6}% 31
-\BOOKMARK [2][-]{subsection.6.5}{Complexity}{section.6}% 32
-\BOOKMARK [2][-]{subsection.6.6}{Artificial Intelligence}{section.6}% 33
-\BOOKMARK [1][-]{section.7}{Game Design}{}% 34
-\BOOKMARK [1][-]{section.8}{Physics}{}% 35
+\BOOKMARK [2][-]{subsection.6.1}{Binary}{section.6}% 21
+\BOOKMARK [2][-]{subsection.6.2}{System}{section.6}% 22
+\BOOKMARK [3][-]{subsubsection.6.2.1}{File System}{subsection.6.2}% 23
+\BOOKMARK [3][-]{subsubsection.6.2.2}{}{subsection.6.2}% 24
+\BOOKMARK [2][-]{subsection.6.3}{Pseudocode}{section.6}% 25
+\BOOKMARK [2][-]{subsection.6.4}{Programming}{section.6}% 26
+\BOOKMARK [3][-]{subsubsection.6.4.1}{Special Symbol}{subsection.6.4}% 27
+\BOOKMARK [3][-]{subsubsection.6.4.2}{Naming}{subsection.6.4}% 28
+\BOOKMARK [3][-]{subsubsection.6.4.3}{Comment}{subsection.6.4}% 29
+\BOOKMARK [2][-]{subsection.6.5}{Language}{section.6}% 30
+\BOOKMARK [3][-]{subsubsection.6.5.1}{Context-Free Grammar}{subsection.6.5}% 31
+\BOOKMARK [3][-]{subsubsection.6.5.2}{Regular Expression}{subsection.6.5}% 32
+\BOOKMARK [3][-]{subsubsection.6.5.3}{Automata}{subsection.6.5}% 33
+\BOOKMARK [2][-]{subsection.6.6}{Computability}{section.6}% 34
+\BOOKMARK [2][-]{subsection.6.7}{Complexity}{section.6}% 35
+\BOOKMARK [2][-]{subsection.6.8}{Artificial Intelligence}{section.6}% 36
+\BOOKMARK [1][-]{section.7}{Game Design}{}% 37
+\BOOKMARK [1][-]{section.8}{Physics}{}% 38
+\BOOKMARK [1][-]{section.9}{Economics}{}% 39
