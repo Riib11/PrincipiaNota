@@ -11,6 +11,7 @@
 }
 \usepackage{amsmath}
 \usepackage{mathpazo}
+\usepackage{textcomp}
 
 %===============================================================
 %===============================================================
@@ -19,13 +20,15 @@
 % COMMANDS
 
 \newcommand{\definition}[1]{
-	\vspace{10px}
+	\vspace{5px}
 	\noindent {\sc Definition.} #1
-	\vspace{10px}
+	\vspace{5px}
 }
 \newcommand{\tbs}{\textbackslash}
 \newcommand{\ttilde}{\textasciitilde}
 \newcommand{\tasterisk}{\textasteriskcentered}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\p}{^\prime}
 
 %===============================================================
 %===============================================================
@@ -76,6 +79,7 @@ There is a distinction between what I mean by \textit{code} and what I mean by \
 \section{Philosophy}
 
 \subsection{Logic}
+\subsubsection{Truth Table}
 \subsubsection{Variable}
 
 \subsection{Metaphysics}
@@ -84,7 +88,6 @@ There is a distinction between what I mean by \textit{code} and what I mean by \
 
 \subsection{Ethics}
 
-\subsection{Metaphysics}
 
 %===============================================================
 %===============================================================
@@ -104,6 +107,8 @@ There is a distinction between what I mean by \textit{code} and what I mean by \
 
 \subsection{Calculus}
 
+\subsection{Graph Theory}
+
 %===============================================================
 %===============================================================
 \section{Computarelogy}
@@ -113,30 +118,161 @@ There is a distinction between what I mean by \textit{code} and what I mean by \
 \subsubsection{File System}
 \subsubsection{}
 
-\subsection{Program}
+\subsection{Programming}
+
+	This section focusses on the standards and conventions in computer programming. Many standards are enforced by programming languages and many conventions are not, and visa versa. Many conventions come in different flavors. However, for any particular program the convention choices are expected to be consistent across all of the code.
+
+	I focus here on standards and conventions that are widespread across many languages and use cases, rather than language specific ones. However, as I reoterate later on, many language-specific constructions are inspired by broader coded themes.
+
+\subsubsection{Special Symbol}
+	Notation in programming languages often uses special symbols that resemble the look and function of mathematics ones, as well as adding a few new function to available ASCII characters. Some symbols have multiple distinct meanings, which are seperated by commas in the right column of the table below.
+
+	Note that many programming languages devise their own special symbols or combinations of symbols that are language-specific and non-standard. This list records only the standard associations of the symbols across languages and academia. Additionally, many language-specific instances draw on these standards. For example, Python uses \code{//} for integer division, whereas it is standardly used to begin in-line comments. Why do languages differ is such odd, arbitrary ways? I don't know, however I may address this question later.
+
+	\vspace{20px}
+	
+	\begin{tabular}{c|l}
+		Symbol  & Meanings \\ \hline
+		\code{+} 	&numeric addition, list join \\
+		\code{-} 	&numeric subtraction, cabob-case \\
+		\code{/} 	&numeric division \\
+		\code{*} 	&numeric multiplication, type product, pointer type \\
+		\code{\textasciicircum} &numeric power-of, bitwise XOR \\
+		\code{\%}   &numeric modulo \\
+		\code{\&}   	&bitwise AND, reference-of (pointers context) \\
+		\code{|}    	&bitwise OR, case matching divider \\
+		\code{\&\&} 	&boolean AND \\
+		\code{||}	&boolean OR \\
+		\code{!} 		&boolean NOT\\
+		\texttildelow & bit inversion \\
+		\code{<<}	&bits shift left \\
+		\code{>>}	&bits shift right \\
+		\code{<}		&numberic less than \\
+		\code{<=}	&numeric less than or equal to\\
+		\code{>}		&numeric greater than \\
+		\code{>=} 	&numeric greater than or equal to\\
+		\code{?}		&conditional ternary \\
+		\code{=}		&value assignment, token equality \\
+		\code{:=}	&value assignment \\
+		\code{==}	&value equality \\
+		\code{->}	&function type constructor \\
+		\code{=>}	&anonymous function, ``maps to'' \\
+		\code{,} 		&tuple \\
+		\code{;}		&end of statement \\
+		\code{\#}		&in-line comment begin \\
+		\code{//} 		&in-line comment begin \\
+		\code{/* */}   &multi-line comment block \\
+		\textbackslash &begin escaped word \\
+		\code{` '}	&a single of character type, unformatted string\\
+		\code{" "}	&formatted string \\
+		\code{( )} 	&function call with enclosed parameters, associative grouping \\
+		\code{[ ]}	&indexing operator (comes after target, encloses index value)\\
+		\code{\{ \}}	&block with new scope, object body \\
+		\code{< >} &special parameters, type parameters \\
+		\code{\$}		&associative divide \\
+		\code{.}       &scope tree name divider
+	\end{tabular}
+
+\subsubsection{Naming}
+
+	In programming almost everything needs a name. And every name carries with it much significance not encompasses solely by its pronunciation. The important factors to consider when judging a naming style are
+
+	\begin{enumerate}
+		\item \textbf{Readability} is how easily one can recognize the important characteristics of names.
+		\item \textbf{Accuracy} is how closely names correspond to the full literal descriptions, including correct grammar and syntax, of their representees.
+		\item \textbf{Brevity} is how efficiently name represent the relevant features of their representees.
+	\end{enumerate}
+
+	When first reading someone's code, the first thing you will most likely notice is their style of casing. Casing is one of the easiest ways for source-code to convey abstract meaning tied to programming constructs. The dominant flavors of casing are
+
+	\begin{enumerate}
+		\item \textbf{Camel Case} has the first letter of each word in a name be upper case, whereas all other letters are lower case. For example, \code{thisIsAName}. As for the first word, its capitalization is delegated to contextual judgement. This case infamously has discontinuities with words that generally require capital letters and acronyms. For example, \code{XMLHttpRequest} is a commonly-used javascript function. Javascript standardly adheres to camel case, but this example demonstrates both an inconsistency with camel case and also with its interal casing. Compare it to \code{XmlHttpRequest} and \code{XMLHTTPRequest}. The truth is that none of them look particularly aesthetic. The problem is that XML and HTTP are both fully-capitalized acronyms, but together they cross a line of acceptable readability (especially as a function to be used as often as it is). So, the result trades accuracy for readability. In this case, the trade seems to be fine because as a common function people have gotten used to it without much of a problem. For conflicts like this in non-standard code however, instances of this problem become quite a pain on the eyes.
+
+		\item \textbf{Snake Case} has each word seperated by a \code{_} character. For example, \code{this_is_a_name}.
+		
+		\item \textbf{Kebab Case} (aka Cobol Case) has each word seperated by a \code{-} character. For example, \code{this-is-a-name}. Famously, CSS standardizes and Agda requires kebab casing. The immediately-obvious drawback to this
+	\end{enumerate}
+
+\subsubsection{Comment}
+
 
 \subsection{Language}
+
+	\definition{A \textbf{letter} is a member of an alphabet. Letters are denoted by single ASCII characters. $\sigma$ is associated with a generic letter.}
+
+	\definition{An \textbf{alphabet} is a finite set of letters. $\Sigma$ is often used as the name of either a specific or generic alphabet.}
+
+	\definition{A \textbf{string} is a $n$-tuple of letters, where $n$ is the length of the string.}
+
+	\definition{A \textbf{language} is set of strings that all have letters in some alphabet $\Sigma$. $L$ is ogten used as the name f either a specific or generic language. $L(X)$ represents the language yielded by the $X$, where $X$ is an automata, grammar, or other language-yielding construct.}
+
 \subsubsection{Context-Free Grammar}
+
+	\definition{A context-free grammar (CFG) is a set of rules that yield a language (a context-free language (CFL)) with an alphabet $\Sigma$. Formally, a grammar $G$ is given by \[
+		G = (S, \Sigma \cup \{ \epsilon \}, V, R)
+	\] where $S$ is the start token, $\Sigma \cup \{ \epsilon \}$ is a set of terminals, $V$ is a set of non-terminals, and $R$ is the set of rules.}
+
+	The language is yielded by applying staring with $S$ and then applying the rules in every valid combination and order. In other words, a string is in the yielded language if it can be produced exactly by applying rules to $S$.
+
+	\defintion{A \textbf{token} is either a letter in either $\Sigma$ or $V$.}
+
+	\definition{If a token is \textbf{terminal}, then it cannot be manipulated by rule applications. If a terminal is produced by a rule application in a string, then it will persist till the string is completed. When a string contains only terminals, it is completed.}
+
+	\definition{If a token is \textbf{non-terminal}, then it must be manipulated by rule applications. A string is not completed until all of the non-terminals have been transformed into terminals by rule appliations.}
+
+	The rules follow a few conventions.
+	\begin{enumerate}
+		\item Capital letters reprents non-terminals.
+		\item Rules are writted $A \rightarrow x$ where $A$ is a non-terminal and $x$ is a string of tokens. This represents the rule ``any A can be replaced with x''.
+		\item The left-hand-side of each rule must be a single non-terminal. The right-hand-side of each rule must be a string of tokens.
+		\item There must be at least one rule $S \rightarrow x$, where $x$ is a string of tokens.
+		\item There must be at least one rule $A \rightarrow x$, where $A$ is a non-terminal and $x$ is a string of only terminals.
+		\item For each terminal in $A \in V$, there must be at least one rule $A \rightarrow x$, where $x$ is a string of tokens.
+		\item A subset of $R$ of the form $\{ A \rightarrow x_1, A \rightarrow x_2, \dots, A \rightarrow x_n \}$ can be written as $A \rightarrow x_1 \mid x_2 \mid \cdots \mid x_n$. $|$ are often used as dividers in case rules like this.
+	\end{enumerate}
+
 \subsubsection{Regular Expression}
 
 	Regular expressions are a rare instance of practicality derived from this subfield of Computarelogy. A regular expression represents a set of strings. The academic standard for regular expressions is the simple grammar
-	\begin{align*}
-		S &\rightarrow
-			\epsilon
-			\mid \sigma_i \mid \cdots \mid \sigma_n
-			\mid SS
-			\mid (S \cup S)
-			\mid (S)^*
-	\end{align*}
+	\[ \begin{array}{rll}
+		S \rightarrow
+			&\mid \epsilon & \text{empty string} \\
+			&\mid \sigma_i \mid \cdots \mid \sigma_n & \text{letter of $\Sigma$} \\
+			&\mid SS & \text{concatenation} \\
+			&\mid (S \cup S) & \text{set union} \\
+			&\mid (S)^* & \text{Kleene star: } \{ x_1 x_2 \cdots x_n \mid \forall i \geq 0, x_i \in S \}
+	\end{array} \]
 	Where $\Sigma = \{ \sigma_i, \dots, \sigma_n \}$ is the alphabet of the grammar. In addition to these standard rules, there are many other common rules:
-	\[ \begin{array}{c|l}
-		S+ &\text{ anything can come after } S\\
-		\$ &\text{ the end of the string}\\
-		S \mid S &\text{ set union}
+	\[ \begin{array}{r|l}
+		S+ 			&S^* \text{ while additionally requiring } i > 0 \\
+		S?			&S^* \text{ while aditionally requiring } i = 0 \lor i = 1 \\
+		S \mid S 	&\text{set union} \\
+		\text{[} \sigma_1 \cdots \sigma_n \text{]}
+					&\text{letter union:} \cup_{i=1}^n \sigma_i \\
+		\text{[} \sigma_0-\sigma_1 \text{]}
+					&\text{letters from $\sigma_0$ to $\sigma_1$ in the standard ordering of $\Sigma$} \\
+		. 			&\text{anything except newline} \\
+		\$ 			&\text{end of the string} \\
+		
+		
 	\end{array} \]
 
 \subsubsection{Automata}
 
+\subsection{Computability}
+
+\subsection{Complexity}
+
 \subsection{Artificial Intelligence}
+
+
+%===============================================================
+%===============================================================
+\section{Game Design}
+
+%===============================================================
+%===============================================================
+\section{Physics}
+
 
 \end{document}

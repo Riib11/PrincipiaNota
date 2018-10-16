@@ -3,11 +3,11 @@
 \BOOKMARK [1][-]{section.3}{Archaic}{}% 3
 \BOOKMARK [1][-]{section.4}{Philosophy}{}% 4
 \BOOKMARK [2][-]{subsection.4.1}{Logic}{section.4}% 5
-\BOOKMARK [3][-]{subsubsection.4.1.1}{Variable}{subsection.4.1}% 6
-\BOOKMARK [2][-]{subsection.4.2}{Metaphysics}{section.4}% 7
-\BOOKMARK [2][-]{subsection.4.3}{Epistemology}{section.4}% 8
-\BOOKMARK [2][-]{subsection.4.4}{Ethics}{section.4}% 9
-\BOOKMARK [2][-]{subsection.4.5}{Metaphysics}{section.4}% 10
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Truth Table}{subsection.4.1}% 6
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Variable}{subsection.4.1}% 7
+\BOOKMARK [2][-]{subsection.4.2}{Metaphysics}{section.4}% 8
+\BOOKMARK [2][-]{subsection.4.3}{Epistemology}{section.4}% 9
+\BOOKMARK [2][-]{subsection.4.4}{Ethics}{section.4}% 10
 \BOOKMARK [1][-]{section.5}{Mathematics}{}% 11
 \BOOKMARK [2][-]{subsection.5.1}{Logic}{section.5}% 12
 \BOOKMARK [2][-]{subsection.5.2}{Set Theory}{section.5}% 13
@@ -16,13 +16,20 @@
 \BOOKMARK [2][-]{subsection.5.5}{Algebra}{section.5}% 16
 \BOOKMARK [2][-]{subsection.5.6}{Analysis}{section.5}% 17
 \BOOKMARK [2][-]{subsection.5.7}{Calculus}{section.5}% 18
-\BOOKMARK [1][-]{section.6}{Computarelogy}{}% 19
-\BOOKMARK [2][-]{subsection.6.1}{System}{section.6}% 20
-\BOOKMARK [3][-]{subsubsection.6.1.1}{File System}{subsection.6.1}% 21
-\BOOKMARK [3][-]{subsubsection.6.1.2}{}{subsection.6.1}% 22
-\BOOKMARK [2][-]{subsection.6.2}{Program}{section.6}% 23
-\BOOKMARK [2][-]{subsection.6.3}{Language}{section.6}% 24
-\BOOKMARK [3][-]{subsubsection.6.3.1}{Context-Free Grammar}{subsection.6.3}% 25
-\BOOKMARK [3][-]{subsubsection.6.3.2}{Regular Expression}{subsection.6.3}% 26
-\BOOKMARK [3][-]{subsubsection.6.3.3}{Automata}{subsection.6.3}% 27
-\BOOKMARK [2][-]{subsection.6.4}{Artificial Intelligence}{section.6}% 28
+\BOOKMARK [2][-]{subsection.5.8}{Graph Theory}{section.5}% 19
+\BOOKMARK [1][-]{section.6}{Computarelogy}{}% 20
+\BOOKMARK [2][-]{subsection.6.1}{System}{section.6}% 21
+\BOOKMARK [3][-]{subsubsection.6.1.1}{File System}{subsection.6.1}% 22
+\BOOKMARK [3][-]{subsubsection.6.1.2}{}{subsection.6.1}% 23
+\BOOKMARK [2][-]{subsection.6.2}{Programming}{section.6}% 24
+\BOOKMARK [3][-]{subsubsection.6.2.1}{Special Symbol}{subsection.6.2}% 25
+\BOOKMARK [3][-]{subsubsection.6.2.2}{Comment}{subsection.6.2}% 26
+\BOOKMARK [2][-]{subsection.6.3}{Language}{section.6}% 27
+\BOOKMARK [3][-]{subsubsection.6.3.1}{Context-Free Grammar}{subsection.6.3}% 28
+\BOOKMARK [3][-]{subsubsection.6.3.2}{Regular Expression}{subsection.6.3}% 29
+\BOOKMARK [3][-]{subsubsection.6.3.3}{Automata}{subsection.6.3}% 30
+\BOOKMARK [2][-]{subsection.6.4}{Computability}{section.6}% 31
+\BOOKMARK [2][-]{subsection.6.5}{Complexity}{section.6}% 32
+\BOOKMARK [2][-]{subsection.6.6}{Artificial Intelligence}{section.6}% 33
+\BOOKMARK [1][-]{section.7}{Game Design}{}% 34
+\BOOKMARK [1][-]{section.8}{Physics}{}% 35
