@@ -332,19 +332,18 @@ There is a distinction between what I mean by \textit{code} and what I mean by \
 			&\mid (S \cup S) & \text{set union} \\
 			&\mid (S)^* & \text{Kleene star: } \{ x_1 x_2 \cdots x_n \mid \forall i \geq 0, x_i \in S \}
 	\end{array} \]
-	Where $\Sigma = \{ \sigma_i, \dots, \sigma_n \}$ is the alphabet of the grammar. In addition to these standard rules, there are many other common rules:
+	Where $\Sigma = \{ \sigma_i, \dots, \sigma_n \}$ is the alphabet of the grammar. In addition to these fundamental rules, there are many other common rules that reduce to applications of the fundamental rules:
 	\[ \begin{array}{r|l}
-		S+ 			&S^* \text{ while additionally requiring } i > 0 \\
-		S?			&S^* \text{ while aditionally requiring } i = 0 \lor i = 1 \\
-		S \mid S 	&\text{set union} \\
+		*  			& \text{equivelant to } \Sigma^* \\
+		S+ 			& S^* \text{ while additionally requiring } i > 0 \\
+		S?			& S^* \text{ while aditionally requiring } i = 0 \lor i = 1 \\
+		S \mid S 	& \text{set union} \\
 		\text{[} \sigma_1 \cdots \sigma_n \text{]}
-					&\text{letter union:} \cup_{i=1}^n \sigma_i \\
+					& \text{letter union:} \cup_{i=1}^n \sigma_i \\
 		\text{[} \sigma_0-\sigma_1 \text{]}
-					&\text{letters from $\sigma_0$ to $\sigma_1$ in the standard ordering of $\Sigma$} \\
-		. 			&\text{anything except newline} \\
-		\$ 			&\text{end of the string} \\
-		
-		
+					& \text{letters from $\sigma_0$ to $\sigma_1$ in the standard ordering of $\Sigma$} \\
+		. 			& \text{anything except newline} \\
+		\$ 			& \text{end of the string} \\
 	\end{array} \]
 
 \subsubsection{Automata}
