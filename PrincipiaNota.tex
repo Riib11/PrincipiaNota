@@ -16,6 +16,10 @@
 \usepackage{geometry}
 \usepackage{marginnote}
 \usepackage{amssymb}
+\usepackage{endnotes}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{pgfornament}
 
 %===============================================================
 %===============================================================
@@ -38,11 +42,15 @@
 %===============================================================
 %===============================================================
 %===============================================================
-% TITLE PAGE
+% TITLE PAGE: SETUP
 
 \title{Principia Nota}
 \author{Henry Blanchette}
 \date{}
+
+% colors
+\definecolor{titlepagecolor}{rgb}{1.00, 1.00, 1.00}
+\definecolor{namecolor}{rgb}{0.00, 0.00, 0.00}
 
 %===============================================================
 %===============================================================
@@ -51,7 +59,50 @@
 % BEGIN DOCUMENT
 
 \begin{document}
-\maketitle
+
+%===============================================================
+%===============================================================
+% TITLE PAGE: RENDER
+\begin{titlepage}
+	\newgeometry{left=3cm, top=2cm, bottom=2cm}
+	
+	% line
+	\noindent
+	\color{black}
+	\makebox[0pt][l]{\rule{1.3\textwidth}{2pt}}
+	\bigskip \par
+	
+	% title
+	\noindent
+	\color{black}
+	{\Huge \bfseries Principia Nota}
+	
+	\vfill
+	
+	\pgfornament[
+		width  = 7cm,
+		color  = black]
+	{14}
+	
+	\vfill
+	
+	% author
+	\noindent
+	{\large \bfseries Henry Blanchette}
+	\vskip\baselineskip
+	\noindent
+	{Version 0.0}
+	
+	% line
+	\noindent
+	\color{black}
+	\makebox[0pt][l]{\rule{1.3\textwidth}{2pt}}
+\end{titlepage}
+\restoregeometry % restores the geometry
+\nopagecolor% Use this to restore the color pages to white
+
+
+\newpage
 \tableofcontents
 
 \newpage
@@ -73,7 +124,10 @@ There is a distinction between what I mean by \textit{code} and what I mean by \
 %===============================================================
 %===============================================================
 % Content
-	
+
+%===============================================================
+%===============================================================
+\newpage
 \section{Rich Text}
 
 \subsubsection{Header}
@@ -85,15 +139,23 @@ There is a distinction between what I mean by \textit{code} and what I mean by \
 \subsubsection{Math}
 \subsubsection{Code}
 
+%===============================================================
+%===============================================================
+\newpage
 \section{Archaic}
 
 %===============================================================
 %===============================================================
+\newpage
 \section{Philosophy}
 
 \subsection{Logic}
-\subsubsection{Truth Table}
 \subsubsection{Variable}
+	This is really the fundamental concept of what \textit{variable} really means (although the term is often appropriated for other uses).
+	
+	\definition{A \textbf{variable} is a }
+
+\subsubsection{Truth Table}
 
 \subsection{Metaphysics}
 
@@ -104,6 +166,7 @@ There is a distinction between what I mean by \textit{code} and what I mean by \
 
 %===============================================================
 %===============================================================
+\newpage
 \section{Mathematics}
 
 \subsection{Names}
@@ -111,6 +174,9 @@ There is a distinction between what I mean by \textit{code} and what I mean by \
 \subsubsection{Greek}
 \subsubsection{Latin}
 \subsubsection{Diacratic}
+	
+	% These are the little hats and stuff put on top of letters
+
 \subsubsection{Special Symbol}
 \subsubsection{Capitalization}
 \subsubsection{Abbreviation}
@@ -130,35 +196,93 @@ There is a distinction between what I mean by \textit{code} and what I mean by \
 	The symbol ``$\in$'' is derived from a standard ``$\epsilon$''. In \textit{Arithmetices prinicipia nova methodo exposita} Giuseppe Peano used ``$\epsilon$'' to abbreviate ``est'', which is latin for ``in'' (note that the text was entirely in latin). Later in Bertrand Russel's \textit{Principia Mathematica}, the same meaning was used but the printed ended up looking more like ``$\in$'', a intended to be a more modern-looking epsilon. The new symbol was adopted over time as distinct from ``$\epsilon$'' and delegated exclusively to meaning ``\dots is a member of the set \dots''.
 
 	Dealings with sets also get their own notations. Symbols can be reflected across their y-axis to yield the symbol working in the opposite direction. For example, $A \subset B$ can be written as $B \supset A$. The most important set-related notations are
+	
 	\begin{tabular}{c|l}
 		Symbol Instance & Description \\ \hline
 		$a \in A$ &
-			Set membership. $a$ is an element of $A$. \\
+			Set membership. $a$ is an element of $A$.
+		\\\hline
 		$A \cup B$ &
-			Set union. The set with all the elements of $A$ and all the elements of $B$. The symbol resembles a ``linking'' of the two sets, like a chain. \\
+			Set union. The smallest set with all the elements of $A$ \\&
+			and all the elements of $B$. The symbol resembles \\&
+			a ``linking'' of the two sets, like a chain.
+		\\\hline
 		$A \cap B$ &
-			Set intersection. The set with all the elements of $A$ that are also elements of $B$. The symbol resembles a filtering of the two sets, like a sifting apparatus or funnel. \\
+			Set intersection. The largest set with only the elements of \\&
+			$A$ that are also elements of $B$. The symbol resembles \\&
+			a filtering of the two sets, like a sifting apparatus or funnel.
+		\\\hline
 		$A \setminus B$ &
-			Set difference. The set with all the elements of $A$ that are not elements of $B$. The symbol resembles a long and tilted minus sign. \\
+			Set difference. The set with all the elements of $A$ \\&
+			that are not elements of $B$. The symbol resembles a \\&
+			long and tilted minus sign.
+		\\\hline
 		$A \subset B$ &
-			Proper subset. The symbol is an alteration on the $\cup, \cap$, with the sideways tilt indicating that $A$ unioned with some other set would yield $B$. Specifically, $A \subset B$ usually implies that $A \neq B$. However, some take the convention of allowing $A = B$, in which case their is no technical difference between $A \subset B$ and $A \subseteq B$. The only difference is an emphasis on the possibility that $A = B$. \\
+			Proper subset. The symbol is an alteration on the \\&
+			$\cup, \cap$, with the sideways tilt indicating that $A$ \\&
+			unioned with some other set would yield $B$. Specifically, \\&
+			$A \subset B$ usually implies that $A \neq B$. However, \\&
+			some take the convention of allowing $A = B$, in which \\&
+			case their is no technical difference between $A \subset B$ \\&
+			and $A \subseteq B$. The only difference is an emphasis on \\&
+			the possibility that $A = B$.
+		\\\hline
 		$A \subseteq B$ &
-			Included subset. The symbol is an alteration on $\subset$, adding half of a $=$ underneath to indicate the possibility of $A = B$. \\
+			Included subset. The symbol is an alteration on $\subset$,\\&
+			adding half of a $=$ underneath to indicate the possibility \\&
+			of $A = B$.
+		\\\hline
 		$A = B$ &
-			Set equality. Sets are equal if and only if $A \subseteq B$ and $B \subseteq A.$ \\
-		$\{ a \in A \mid a \text{ has property } P \} &
-			Set definition idiom. This translates to ``the largest subset of $A$ in which every element has property $P$''. Note that $P$ is extremeley flexible. This notation for defining sets is extremeley useful and concise. Sometimes, the ``$\in A$'' to the left of ``\mid'' is not written and is eiher implied by ``P'' or assumed to be unrestricted to any particular set. \\
-		$A \times B$
-			Cartesian Product. Formally, $A \times B = \{ (a,b) \mid a \in A, b \in B \}$. $A \times B$ is pronounced ``the Cartesian cross-product of A and B,'' but the ``Cartesian'' adjective is implicit. The ``cross'' idea is to imagine that $A$ and $B$ are perpendicular axes, forming a cross, and yielding a grid where each point in the grid is labeled by an $(a,b)$ where $a \in A, b \in B$. This is the \textit{ordered pairs} cross the sets. An ordered pair written as $(a,b)$ which is a notation for $\{ a , \{a, b\}\}. The set construction indicates ordering by having the ``second'' element only appear in the set that is the second element of $(a,b)$. This set construction works well for ordered pairs, but it difficult to extend to the more generic \textit{n-tuple}. I will cover this later. \\
-		$A / B$ &
-			Set modulus. TODO \\
+			Set equality. Sets are equal if and only if $A \subseteq B$\\&
+			 and $B \subseteq A.$
+		\\\hline
+		$\{ a \in A \mid a \text{ has property } P \}$ &
+			Set definition idiom. This translates to ``the largest subset \\&
+			of $A$ in which every element has property $P$''. Note that $P$ \\&
+			is extremeley flexible. This notation for defining sets is \\&
+			extremeley useful and concise. Sometimes, the ``$\in A$'' to \\&
+			the left of ``$\mid$'' is not written and is either implied by \\&
+			``P'' or assumed to be unrestricted to any particular set.
+		\\\hline
+		$A \times B$ &
+			Cartesian Product. Formally, \\&
+			$A \times B = \{ (a,b) \mid a \in A, b \in B \}$. \\&
+			$A \times B$ is pronounced ``the Cartesian cross-product \\&
+			of A and B,'' but the ``Cartesian'' adjective is implicit.\\&
+			The ``cross'' idea is to imagine that $A$ and $B$ are perpendicular \\&
+			axes, forming a cross, and yielding a grid where each point in the \\&
+			grid is labeled by an $(a,b)$ where $a \in A, b \in B$. This is the \\&
+			\textit{ordered pairs} cross the sets. An ordered pair written as \\&
+			$(a,b)$ which is a notation for $\{ a , \{a, b\}\}$. The set \\&
+			construction indicates ordering by having the ``second'' element \\&
+			only appear in the set that is the second element of $(a,b)$. This \\&
+			set construction works well for ordered pairs, but it difficult to \\&
+			extend to the more generic \textit{n-tuple}. I will cover this later.
+		\\\hline
+		$A / R$ &
+			Set quotient, where $A$ is a set and $R : A \rightarrow A$ is an \\&
+			equivalence relation. With these, \\&
+			$A / R = \{ \{ a\p \in A \mid r(a) = a\p \mid a \in A \}$. \\&
+			In English, $A/R$ is the set of subsets of $A$ in which each \\&
+			element is related to every other by $R$ (\textit{equivalence class}).
 	\end{tabular}
 
-	\begin{enumerate}
-		\item $\cap$ 
-	\end{enumerate}
-
-
+	Many of these symbols are the most fundamental symbols of Mathematics. This reflects well Set Theory's place within the modern mathematical discipline. Almost everything can be expanded out to a set representation. In terms of notation, this is very fortunate. Many new mathematical ideas can use shorthand from or inspired by Set Theory. This provides a sort of "atomization" of mathematical notation, where there is a genealogy of similarity from the basic, set-theoretical terms to extremely specific and contextual notation. For example, in algebra, many symbols such as related:
+	\[
+		\times, /, =
+	\]
+	The advantages of the Set Theory framework are intuitiveness, universality, and its atomic-nature as I mentioned. Are there things, however, that expand beyond the reach set-theoretical notation? There is always Russell's famous \endnote{https://www.britannica.com/topic/Russells-paradox}
+	\[
+		\textit{PARADOX} := \{ A \mid A \text{ is a set that is not a member of itself} \}.
+	\]
+	The question to ask of \textit{PARADOX} is "is \textit{PARADOX} a member of itself?"
+	
+	
+	
+	
+	
+	
+\subsection{Function}
 
 \subsection{Measure Theory}
 
@@ -175,6 +299,13 @@ There is a distinction between what I mean by \textit{code} and what I mean by \
 %===============================================================
 %===============================================================
 \section{Computarelogy}
+
+
+% TODO
+
+etymology of the word computer, as well as inspiration for the new word for computer science on the mathematical side. Perhaps "Computarelogy"?
+
+% Link: https://www.etymonline.com/word/compute#etymonline_v_17291
 
 \subsection{Binary}
 
@@ -212,7 +343,7 @@ There is a distinction between what I mean by \textit{code} and what I mean by \
 	\vspace{20px}
 	
 	\begin{tabular}{c|l}
-		Symbol  & Meanings \\ \hline
+		Symbol  & Meaning \\ \hline
 		\code{+} 	&numeric addition, list join \\
 		\code{-} 	&numeric subtraction, cabob-case \\
 		\code{/} 	&numeric division \\
@@ -357,15 +488,24 @@ There is a distinction between what I mean by \textit{code} and what I mean by \
 
 %===============================================================
 %===============================================================
+\newpage
 \section{Game Design}
 
 %===============================================================
 %===============================================================
+\newpage
 \section{Physics}
 
 %===============================================================
 %===============================================================
+\newpage
 \section{Economics}
 
+
+%===============================================================
+%===============================================================
+% Endnotes
+\newpage
+\theendnotes
 
 \end{document}
